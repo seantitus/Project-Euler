@@ -1,4 +1,13 @@
+/**
+ * Finds the sum of even numbers in the fibonacci sequence smaller than 4000000
+ * @author Sean Titus
+ * @version 1.0
+ */
 public class Problem2 {
+    /**
+     * Sums even fibonacci numbers
+     * @param args Command line arguments that aren't used
+     */
     public static void main(String[] args) {
         int total = 0;
         int prev = 1;
