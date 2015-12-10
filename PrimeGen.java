@@ -25,10 +25,10 @@ public class PrimeGen {
     private void genPrimes() {
         int i = 2;
         fullPrimes[1] = 0; //1 is weird with primes
-        while (i < fullPrimes.length / 2) { //Change to sqrt
+        while (i < (int) Math.sqrt(fullPrimes.length)) {
             if (i != 0) {
                 int j = i;
-                while (j < fullPrimes.length / 2) {
+                while (j < fullPrimes.length - i) {
                     j += i;
                     fullPrimes[j] = 0;
                 }

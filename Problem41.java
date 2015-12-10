@@ -18,7 +18,7 @@ public class Problem41 {
     }
     public static void main(String[] args) {
         boolean found = false;
-        int i = 987654321;
+        int i = 7654321;
         while (found == false) {
             if (isPandigital(i)) {
                 if (isPrime(i)) {
