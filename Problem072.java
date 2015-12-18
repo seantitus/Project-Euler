@@ -10,7 +10,12 @@ public class Problem072 {
         ArrayList<Integer> primes = pg.getPrimesList();
         int i = 0;
         int j = num;
-        while (primes.get(i) <= j) {
+        if (pg.isPrime(num)) {
+            divisors.add(num);
+            divisorMap.put(num, divisors);
+            return divisors;
+        }
+        while (primes.get(i) <= j && primes.get(i) <= num / 2) {
             if (divisorMap.containsKey(j)) {
                 divisors.addAll(divisorMap.get(j));
                 j = 1;
