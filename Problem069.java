@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.HashMap;
 import java.util.HashSet;
-public class Problem69 {
+public class Problem069 {
     private static PrimeGen pg;
     private static HashMap<Integer, HashSet<Integer>> divisorMap;
     private static HashSet<Integer> getDivisors(int num) {
@@ -10,7 +10,12 @@ public class Problem69 {
         ArrayList<Integer> primes = pg.getPrimesList();
         int i = 0;
         int j = num;
-        while (primes.get(i) <= j) {
+        if (pg.isPrime(num)) {
+            divisors.add(num);
+            divisorMap.put(num, divisors);
+            return divisors;
+        }
+        while (primes.get(i) <= j && primes.get(i) < num) {
             if (divisorMap.containsKey(j)) {
                 divisors.addAll(divisorMap.get(j));
                 j = 1;
